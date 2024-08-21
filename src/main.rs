@@ -13,7 +13,7 @@ use futures::stream::StreamExt;
 #[tokio::main]
 async fn main() {
     let anvil = Anvil::new()
-        .args(["--ipc", "/tmp/anvil.ipc"])
+        .args(["--ipc", "/tmp/anvil.ipc", "--block-time", "1"])
         .try_spawn()
         .unwrap();
 
